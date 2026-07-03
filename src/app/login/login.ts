@@ -16,12 +16,16 @@ export class Login {
 
       if(this.loginForm.value.username===username && 
          this.loginForm.value.password===password
-      ){
+      )
+      {
         alert("Login Successfull");
-      }else
-        {
+        console.log("logged in");
+      }
+      else
+      {
           alert("Invalid Username or Password");
-        }
+          console.log("Invalid Credentials ");
+      }
 
   }
   loginForm = new FormGroup({
@@ -32,3 +36,4 @@ export class Login {
 });
 
 }
+  
