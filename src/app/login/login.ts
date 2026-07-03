@@ -1,14 +1,16 @@
 import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  imports: [ReactiveFormsModule],
-  templateUrl: './login.html',
-  styleUrl: './login.scss',
+  selector : 'app-login',
+  imports : [ReactiveFormsModule],
+  templateUrl : './login.html',
+  styleUrl : './login.scss',
 })
 export class Login {
+    constructor(private router: Router) {}
   login()
   {
       const username ="admin";
@@ -20,6 +22,7 @@ export class Login {
       {
         alert("Login Successfull");
         console.log("logged in");
+        this.router.navigate(['/dashboard']);
       }
       else
       {
@@ -29,11 +32,10 @@ export class Login {
 
   }
   loginForm = new FormGroup({
-  username: new FormControl('',[
+  username : new FormControl('',[
     Validators.required,
     Validators.minLength(3)]),
-  password: new FormControl('',[Validators.required,Validators.minLength(5)])
+  password : new FormControl('',[Validators.required,Validators.minLength(5)])
 });
 
 }
-  
