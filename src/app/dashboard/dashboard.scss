@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f4f6f9;
+}
+
+.dashboard-container{
+    width: 80vh;
+    max-width: 1200px;
+    margin: 40px auto;
+
+}
+
+.dashboard-container h1{
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.dashboard-container p{
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 260px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card h2{
+    font-size: 38px;
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-size: 18px;
+    color: #555;
+}
